@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Praja Sakti Group &mdash; Penilaian Arsitek (Kemanggisan Pulo)</title>
+  <meta name="description" content="Sistem penilaian & pemeringkatan konsultan arsitek untuk proyek Compound Kemanggisan Pulo, Jakarta - Praja Sakti Group." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#162F52',
+            navydark: '#0F223D',
+            gold: '#B69246',
+            goldtint: '#F5EFE0',
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="assets/styles.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+
+  <script src="assets/config.js"></script>
+  <script src="assets/data.js"></script>
+  <script src="assets/scoring.js"></script>
+  <script src="assets/state.js"></script>
+  <script src="assets/views.js"></script>
+  <script src="assets/exports.js"></script>
+  <script src="assets/main.js"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen">
+
+  <div id="sync-banner" class="hidden"></div>
+
+  <header id="app-header"></header>
+
+  <main class="max-w-[1400px] mx-auto px-3 sm:px-5 pb-24">
+    <nav id="main-tabs" class="my-4"></nav>
+    <section id="view-evaluator"></section>
+    <section id="view-rekap" class="hidden"></section>
+  </main>
+
+  <div id="toast-wrap" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2"></div>
+
+  <div id="modal-root"></div>
+
+  <footer class="border-t border-slate-200 bg-white">
+    <div class="max-w-[1400px] mx-auto px-4 py-4 text-xs text-slate-500 flex flex-wrap items-center justify-between gap-2">
+      <span>&copy; Praja Sakti Group &mdash; Tim Pengembangan Proyek Compound. Dokumen internal, tidak untuk disebarluaskan.</span>
+      <span id="footer-status"></span>
+    </div>
+  </footer>
+
+</body>
+</html>
